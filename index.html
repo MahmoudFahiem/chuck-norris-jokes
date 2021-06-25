@@ -7,11 +7,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
     <link rel="stylesheet" href="skeleton-alerts.css" />
     <title>Chuck Norris Joke Generator</title>
+    <style>
+        .joke {
+            background: #eee;
+            padding: 10px 15px;
+            position: relative;
+        }
+
+        .joke::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 5px;
+            height: 100%;
+            background: #ccc;
+
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h2>Chuck Norris Joke Generator</h2>
-        <form>
+        <form class="jokes-form">
             <div>
                 <label for="number">Number of jokes</label>
                 <input type="number" id="number">
